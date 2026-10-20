@@ -1,0 +1,13 @@
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Local environment & logs
+.env
+*.log
+
+# Dependencies (backend has its own .gitignore too)
+node_modules/
+vendor/
