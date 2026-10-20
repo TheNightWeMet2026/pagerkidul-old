@@ -10,6 +10,8 @@ if (typeof Chart !== "undefined") {
 }
 function createBarChart(id, labels, data, colors) {
 
+    if (typeof Chart === "undefined") return;
+
     const canvas = document.getElementById(id);
 
     if (!canvas) return;
@@ -212,7 +214,7 @@ createBarChart(
 );
 const genderCanvas = document.getElementById("genderChart");
 
-if (genderCanvas) {
+if (genderCanvas && typeof Chart !== "undefined") {
 
     new Chart(genderCanvas, {
 
@@ -327,9 +329,13 @@ document.querySelectorAll('a[href^="#"]').forEach(link => {
 
     link.onclick = e => {
 
+        const href = link.getAttribute("href");
+
+        if (!href || href === "#") return;
+
         e.preventDefault();
 
-        const target = document.querySelector(link.getAttribute("href"));
+        const target = document.querySelector(href);
 
         if (!target) return;
 
@@ -347,7 +353,7 @@ document.querySelectorAll('a[href^="#"]').forEach(link => {
 
 });
 const mapElement = document.getElementById("map");
-if (mapElement) {
+if (mapElement && typeof L !== "undefined") {
     // Pastikan Leaflet init sekali saja.
     // Masalah umum: Leaflet diinisialisasi sebelum tinggi container terhitung
     // atau terjadi init ganda (map variabel tidak ada / tile layer ditambah ke map yang belum dibuat).
@@ -379,6 +385,8 @@ if (mapElement) {
     window.addEventListener("load", initMap, { once: true });
 }
 
-const lightbox = GLightbox({
-    selector: '.gallery-item'
-});
+if (typeof GLightbox !== "undefined" && document.querySelector(".gallery-item")) {
+    GLightbox({
+        selector: ".gallery-item"
+    });
+}

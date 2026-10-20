@@ -18,10 +18,15 @@ class AppServiceProvider extends ServiceProvider
         View::composer(
             ['layouts.*', 'partials.*'],
             function ($view): void {
-                $view->with(
-                    'profile',
-                    VillageProfile::query()->first()
-                );
+                try {
+                    $profile = VillageProfile::query()->first();
+                } catch (\Throwable) {
+                    // Database not migrated yet (fresh install, console, tests):
+                    // render with no profile instead of crashing every page.
+                    $profile = null;
+                }
+
+                $view->with('profile', $profile);
             }
         );
     }

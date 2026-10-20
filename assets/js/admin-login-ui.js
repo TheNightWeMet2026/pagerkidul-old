@@ -44,7 +44,7 @@
         <div style="padding:16px 20px; background:#f8fafc; border-bottom:1px solid #e5e7eb; display:flex; align-items:center; justify-content:space-between;">
           <div>
             <div style="font-weight:900; color:#166534;">Login Admin</div>
-            <div style="font-size:12px; color:#6b7280; font-weight:700;">Demo: user=admin, password=admin</div>
+            <div style="font-size:12px; color:#6b7280; font-weight:700;">Masuk untuk mengelola website desa</div>
           </div>
           <button type="button" id="adminLoginOverlayClose" style="border:none; background:transparent; font-size:18px; cursor:pointer;">×</button>
         </div>
