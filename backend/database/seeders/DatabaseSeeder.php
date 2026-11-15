@@ -58,11 +58,21 @@ class DatabaseSeeder extends Seeder
 
         // --- Officials ---
         $officials = [
-            ['name' => 'Nama Kepala Desa', 'position' => 'Kepala Desa', 'sort_order' => 0],
-            ['name' => 'Nama Sekretaris', 'position' => 'Sekretaris Desa', 'sort_order' => 1],
-            ['name' => 'Nama Kasi', 'position' => 'Kasi Pemerintahan', 'sort_order' => 2],
-            ['name' => 'Nama Kaur', 'position' => 'Kaur Keuangan', 'sort_order' => 3],
-            ['name' => 'Nama Kadus', 'position' => 'Kepala Dusun', 'sort_order' => 4],
+            ['name' => 'Sunandi', 'position' => 'Kepala Desa', 'sort_order' => 0],
+            ['name' => 'Gathot Prawoto', 'position' => 'Sekretaris Desa', 'sort_order' => 1],
+            ['name' => 'Sundoyo', 'position' => 'Kaur Keuangan', 'sort_order' => 2],
+            ['name' => 'Novi Arikta Dini, S.Pd', 'position' => 'Kaur Perencanaan', 'sort_order' => 3],
+            ['name' => 'Sri Wahyuni', 'position' => 'Kasi Pemerintahan', 'sort_order' => 4],
+            ['name' => 'Anita Setyawati', 'position' => 'Kaur Umum dan TU', 'sort_order' => 5],
+            ['name' => 'Agus Dimyati', 'position' => 'Kasi Pelayanan', 'sort_order' => 6],
+            ['name' => 'Jainudin', 'position' => 'Kasi Kesejahteraan Masyarakat', 'sort_order' => 7],
+            ['name' => 'Triono', 'position' => 'Kepala Dusun Krajan', 'sort_order' => 8],
+            ['name' => 'Ali Imron', 'position' => 'Kepala Dusun Pagergunung', 'sort_order' => 9],
+            ['name' => 'Suyanto', 'position' => 'Kepala Dusun Worawari', 'sort_order' => 10],
+            ['name' => 'Tuwadi', 'position' => 'Kepala Dusun Nglumpang', 'sort_order' => 11],
+            ['name' => 'Suprapto', 'position' => 'Kepala Dusun Gemaharjo', 'sort_order' => 12],
+            ['name' => 'Sri Wahyudi', 'position' => 'Staf Desa', 'sort_order' => 13],
+            ['name' => 'Budi Prasetianto', 'position' => 'Staf Desa', 'sort_order' => 14],
         ];
 
         foreach ($officials as $official) {
