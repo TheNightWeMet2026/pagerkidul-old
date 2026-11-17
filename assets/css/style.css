@@ -1057,7 +1057,7 @@ section:nth-child(even)::before {
 .chief-card {
     max-width: 320px;
     width: 100%;
-    background: #fff url('../images/card-bg.jpg') center / cover no-repeat;
+    background: #fff url('../images/card-bg.jpg') 50% 15% / auto 112% no-repeat;
     border-radius: 28px;
     padding: 40px 30px;
     text-align: center;
@@ -1122,7 +1122,7 @@ section:nth-child(even)::before {
 
 .staff-card {
 
-    background: #fff url('../images/card-bg.jpg') center / cover no-repeat;
+    background: #fff url('../images/card-bg.jpg') 50% 15% / auto 112% no-repeat;
 
     border-radius: 22px;
 
@@ -1178,9 +1178,19 @@ section:nth-child(even)::before {
 
 .staff-card span {
 
-    color: var(--primary);
+    display: inline-block;
+
+    padding: 6px 16px;
+
+    background: #E0F3ED;
+
+    color: #428475;
+
+    border-radius: 999px;
 
     font-weight: 600;
+
+    font-size: .9rem;
 
 }
 
