@@ -2745,3 +2745,8 @@ section:not(:last-child)::after {
 #administrasi, #informasi, #pengaduan {
     scroll-margin-top: 92px;
 }
+
+/* Section pertama halaman: beri ruang di bawah navbar fixed */
+.page-first {
+    padding-top: 118px !important;
+}

@@ -13,7 +13,7 @@ rm -rf dist
 mkdir -p dist
 
 # Public pages
-cp index.html profil.html perangkat.html potensi.html statistik.html umkm.html layanan.html berita.html 404.html dist/
+cp index.html profil.html perangkat.html potensi.html statistik.html umkm.html layanan.html berita.html sejarah.html 404.html dist/
 
 # Static assets (css, js, images)
 cp -r assets dist/assets
