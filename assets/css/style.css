@@ -1106,6 +1106,8 @@ section:nth-child(even)::before {
 
     object-fit: cover;
 
+    object-position: 50% 20%;
+
     border-radius: 50%;
 
     border: 6px solid #E0F3ED;
@@ -1175,6 +1177,8 @@ section:nth-child(even)::before {
     height: 120px;
 
     object-fit: cover;
+
+    object-position: 50% 20%;
 
     border-radius: 50%;
 

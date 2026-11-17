@@ -51,7 +51,7 @@ class DatabaseSeeder extends Seeder
                 ]),
                 'address' => 'Desa Pagerkidul, Kecamatan Sudimoro, Kabupaten Pacitan, Jawa Timur',
                 'phone' => '(0357) 000000',
-                'email' => 'desa@pagerkidul.id',
+                'email' => 'pagerkidul.sudimoro@gmail.com',
                 'service_hours' => 'Senin–Jumat, 08.00–15.00 WIB',
             ]
         );
