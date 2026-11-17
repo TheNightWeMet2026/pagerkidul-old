@@ -1057,7 +1057,7 @@ section:nth-child(even)::before {
 .chief-card {
     max-width: 320px;
     width: 100%;
-    background: #fff;
+    background: #fff url('../images/card-bg.jpg') center / cover no-repeat;
     border-radius: 28px;
     padding: 40px 30px;
     text-align: center;
@@ -1069,28 +1069,6 @@ section:nth-child(even)::before {
     margin-right: auto;
 }
 
-.chief-card::before,
-.staff-card::before {
-
-    content: "";
-
-    position: absolute;
-
-    top: 0;
-
-    left: 50%;
-
-    transform: translateX(-50%);
-
-    width: 90px;
-
-    height: 6px;
-
-    border-radius: 0 0 10px 10px;
-
-    background: var(--primary);
-
-}
 
 .chief-card:hover {
 
@@ -1144,7 +1122,7 @@ section:nth-child(even)::before {
 
 .staff-card {
 
-    background: #fff;
+    background: #fff url('../images/card-bg.jpg') center / cover no-repeat;
 
     border-radius: 22px;
 
