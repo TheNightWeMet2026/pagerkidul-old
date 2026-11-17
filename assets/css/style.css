@@ -2664,3 +2664,84 @@ section:not(:last-child)::after {
 .footer p {
     line-height: 1.65;
 }
+
+/* =====================================================
+   NAVBAR DROPDOWN (restruktur menu: Profil/Data/Layanan/Potensi)
+===================================================== */
+
+.navbar .dropdown-toggle::after {
+    border: none; /* caret memakai ikon chevron, garis bawah tetap dari .nav-link::after */
+}
+
+.nav-caret {
+    font-size: .72rem;
+    margin-left: 5px;
+    transition: transform .3s;
+}
+
+.nav-item.dropdown .dropdown-toggle[aria-expanded="true"] .nav-caret {
+    transform: rotate(180deg);
+}
+
+.navbar .dropdown-menu {
+    border: 1px solid rgba(66, 132, 117, .12);
+    border-radius: 14px;
+    box-shadow: 0 18px 40px rgba(26, 49, 44, .14);
+    padding: 8px;
+    margin-top: 10px;
+    background: rgba(255, 255, 255, .97);
+}
+
+.navbar .dropdown-item {
+    border-radius: 9px;
+    padding: 9px 14px;
+    color: var(--text);
+    font-weight: 500;
+}
+
+.navbar .dropdown-item:hover,
+.navbar .dropdown-item:focus {
+    background: #E0F3ED;
+    color: var(--primary);
+}
+
+@media (max-width: 991.98px) {
+    .navbar .dropdown-menu {
+        position: static;
+        box-shadow: none;
+        border: none;
+        background: transparent;
+        margin-top: 0;
+        padding: 0 0 6px 14px;
+    }
+
+    .navbar .dropdown-item {
+        padding: 8px 10px;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1249.98px) {
+    .navbar-nav {
+        gap: 0;
+    }
+
+    .navbar .nav-link {
+        font-size: .9rem;
+        padding-left: .5rem;
+        padding-right: .5rem;
+    }
+
+    .navbar-brand {
+        font-size: 1.3rem;
+    }
+
+    .navbar-brand img {
+        width: 44px;
+        height: 44px;
+    }
+}
+
+#visi-misi, #wilayah, #demografi, #wisata,
+#administrasi, #informasi, #pengaduan {
+    scroll-margin-top: 92px;
+}

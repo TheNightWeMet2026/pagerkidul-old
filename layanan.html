@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layanan Publik — Desa Pagerkidul</title>
+    <meta name="description" content="Produk unggulan UMKM masyarakat Desa Pagerkidul.">
+
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- AOS -->
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- Leaflet  -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css">
+    <link rel="icon" href="assets/images/logo-pacitan.jpg">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css">
+
+
+    <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+</head>
+<body>
+
+    <!-- ===========================
+            NAVBAR
+    ============================ -->
+
+    <nav class="navbar navbar-expand-lg fixed-top">
+
+        <div class="container">
+
+            <a class="navbar-brand" href="index.html">
+
+                <img src="assets/images/logo-pacitan.jpg" alt="Logo Desa">
+
+                <span>Desa Pagerkidul</span>
+
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu">
+
+                <span class="navbar-toggler-icon"></span>
+
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarMenu">
+
+                <ul class="navbar-nav mx-auto">
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Profil Desa<i class="bi bi-chevron-down nav-caret"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="profil.html">Tentang Desa</a></li>
+                            <li><a class="dropdown-item" href="profil.html#wilayah">Wilayah</a></li>
+                            <li><a class="dropdown-item" href="profil.html#visi-misi">Visi &amp; Misi</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="perangkat.html">Pemerintahan</a>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Data Desa<i class="bi bi-chevron-down nav-caret"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="statistik.html#demografi">Demografi</a></li>
+                            <li><a class="dropdown-item" href="statistik.html">Statistik</a></li>
+                            <li><a class="dropdown-item" href="index.html#statistik-singkat">Wilayah</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Layanan Publik<i class="bi bi-chevron-down nav-caret"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="layanan.html#administrasi">Administrasi</a></li>
+                            <li><a class="dropdown-item" href="layanan.html#informasi">Informasi</a></li>
+                            <li><a class="dropdown-item" href="layanan.html#pengaduan">Pengaduan</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Potensi Desa<i class="bi bi-chevron-down nav-caret"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="potensi.html">Ekonomi Lokal</a></li>
+                            <li><a class="dropdown-item" href="umkm.html">UMKM Desa</a></li>
+                            <li><a class="dropdown-item" href="potensi.html#wisata">Wisata Alam</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="berita.html">Berita &amp; Pengumuman</a>
+                    </li>
+
+                </ul>
+
+
+
+            </div>
+
+        </div>
+
+    </nav>
+
+    <!-- ==========================================
+        UMKM SHOWCASE
+=========================================== -->
+
+    
+    <section class="about py-5" id="layanan">
+
+        <div class="container">
+
+            <div class="section-title" data-aos="fade-up">
+                <span class="section-badge">
+                    <i class="bi bi-people-fill"></i>
+                    Layanan Publik
+                </span>
+                <h2>Layanan Publik Desa Pagerkidul</h2>
+                <p>
+                    Pelayanan administrasi, informasi, dan pengaduan bagi
+                    masyarakat Desa Pagerkidul.
+                </p>
+            </div>
+
+            <!-- ADMINISTRASI -->
+            <h3 class="mb-4" id="administrasi">Administrasi</h3>
+
+            <div class="row g-4">
+
+                <div class="col-lg-6" data-aos="fade-up">
+                    <div class="chart-card h-100">
+                        <h4><i class="bi bi-house-fill"></i> Surat Keterangan Domisili</h4>
+                        <p class="mb-2">Persyaratan:</p>
+                        <ul>
+                            <li>Kartu Tanda Penduduk (KTP)</li>
+                            <li>Kartu Keluarga (KK)</li>
+                            <li>Surat pengantar RT/RW setempat</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="chart-card h-100">
+                        <h4><i class="bi bi-shop"></i> Surat Keterangan Usaha</h4>
+                        <p class="mb-2">Persyaratan:</p>
+                        <ul>
+                            <li>Kartu Tanda Penduduk (KTP)</li>
+                            <li>Kartu Keluarga (KK)</li>
+                            <li>Surat pengantar RT/RW setempat</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-lg-6" data-aos="fade-up">
+                    <div class="chart-card h-100">
+                        <h4><i class="bi bi-file-earmark-text-fill"></i> Surat Keterangan Tidak Mampu</h4>
+                        <p class="mb-2">Persyaratan:</p>
+                        <ul>
+                            <li>Kartu Tanda Penduduk (KTP)</li>
+                            <li>Kartu Keluarga (KK)</li>
+                            <li>Surat pengantar RT/RW setempat</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="chart-card h-100">
+                        <h4><i class="bi bi-person-vcard-fill"></i> Pengantar KTP &amp; Kartu Keluarga</h4>
+                        <p class="mb-2">Persyaratan:</p>
+                        <ul>
+                            <li>Kartu Keluarga (KK) lama, bagi perubahan data</li>
+                            <li>Surat pengantar RT/RW setempat</li>
+                            <li>Dokumen pendukung sesuai keperluan (akta, buku nikah, dan sebagainya)</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+
+            <p class="text-secondary mt-3">
+                Persyaratan dapat berbeda sesuai ketentuan yang berlaku.
+                Silakan konfirmasi terlebih dahulu ke Kantor Desa Pagerkidul
+                pada jam pelayanan.
+            </p>
+
+            <!-- INFORMASI -->
+            <h3 class="mb-4 mt-5" id="informasi">Informasi</h3>
+
+            <div class="info-card" data-aos="fade-up">
+
+                <div class="info-item">
+                    <div class="info-icon"><i class="bi bi-geo-alt-fill"></i></div>
+                    <div class="info-content">
+                        <h6>Kantor Desa Pagerkidul</h6>
+                        <p>
+                            Desa Pagerkidul, Kecamatan Sudimoro,
+                            Kabupaten Pacitan, Jawa Timur
+                        </p>
+                    </div>
+                </div>
+
+                <div class="info-item">
+                    <div class="info-icon"><i class="bi bi-clock-fill"></i></div>
+                    <div class="info-content">
+                        <h6>Jam Pelayanan</h6>
+                        <p>Senin - Jumat, 08.00 - 15.00 WIB</p>
+                    </div>
+                </div>
+
+                <div class="info-item mb-0">
+                    <div class="info-icon"><i class="bi bi-envelope-fill"></i></div>
+                    <div class="info-content">
+                        <h6>Surel</h6>
+                        <p>desapagerkidul@gmail.com</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- PENGADUAN -->
+            <h3 class="mb-4 mt-5" id="pengaduan">Pengaduan</h3>
+
+            <div class="info-card" data-aos="fade-up">
+
+                <p>
+                    Masyarakat dapat menyampaikan pengaduan, saran, dan masukan
+                    terkait pelayanan serta penyelenggaraan pemerintahan desa
+                    melalui saluran berikut:
+                </p>
+
+                <div class="info-item">
+                    <div class="info-icon"><i class="bi bi-building"></i></div>
+                    <div class="info-content">
+                        <h6>Datang Langsung</h6>
+                        <p>Kantor Desa Pagerkidul pada jam pelayanan</p>
+                    </div>
+                </div>
+
+                <div class="info-item">
+                    <div class="info-icon"><i class="bi bi-envelope-fill"></i></div>
+                    <div class="info-content">
+                        <h6>Surel</h6>
+                        <p>desapagerkidul@gmail.com</p>
+                    </div>
+                </div>
+
+                <div class="info-item mb-0">
+                    <div class="info-icon"><i class="bi bi-person-fill"></i></div>
+                    <div class="info-content">
+                        <h6>Melalui Kepala Dusun</h6>
+                        <p>Sampaikan kepada Kepala Dusun di wilayah tempat tinggal Anda</p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ===========================
+        FOOTER
+    ============================ -->
+
+    <footer class="footer">
+
+        <div class="container">
+
+            <div class="row gy-5">
+
+                <div class="col-lg-4">
+
+                    <div class="footer-brand">
+
+                        <img src="assets/images/logo-pacitan.jpg" class="footer-logo" alt="Logo">
+
+                        <h4>Desa Pagerkidul</h4>
+
+                    </div>
+
+                    <p>
+
+                        Website resmi Desa Pagerkidul sebagai media informasi,
+                        pelayanan publik, transparansi pemerintahan,
+                        dan promosi potensi desa.
+
+                    </p>
+
+                </div>
+
+
+
+                <div class="col-lg-3">
+
+                    <h5>Kontak</h5>
+
+                    <ul>
+
+                        <li>
+
+                            <i class="bi bi-geo-alt"></i>
+
+                            Pacitan, Jawa Timur
+
+                        </li>
+
+                        <li>
+
+                            <i class="bi bi-envelope"></i>
+
+                            desa@pagerkidul.id
+
+                        </li>
+
+                        <li>
+
+                            <i class="bi bi-telephone"></i>
+
+                            (0357) 000000
+
+                        </li>
+
+                    </ul>
+
+                </div>
+
+                <div class="col-lg-3">
+
+                    <h5>Ikuti Kami</h5>
+
+                    <div class="social">
+
+                        <a href="#"><i class="bi bi-instagram"></i></a>
+
+                        <a href="#"><i class="bi bi-facebook"></i></a>
+
+                        <a href="#"><i class="bi bi-youtube"></i></a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <hr>
+
+            <div class="copyright">
+
+                © 2026 Desa Pagerkidul. All Rights Reserved.
+
+            </div>
+
+        </div>
+
+    </footer>
+
+    <!-- ===========================
+        JAVASCRIPT
+    ============================ -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+    <script>
+        AOS.init({
+            duration: 800,
+            once: true,
+            offset: 100
+        });
+    </script>
+
+    <script src="assets/js/script.js"></script>
+
+</body>
+
+</html>
+
