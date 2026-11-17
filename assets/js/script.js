@@ -390,3 +390,78 @@ if (typeof GLightbox !== "undefined" && document.querySelector(".gallery-item"))
         selector: ".gallery-item"
     });
 }
+/* =====================================================
+   HOME REDESIGN — Hero slideshow (auto 3 detik)
+   + count-up statistik singkat (17 Nov 2026)
+===================================================== */
+(function () {
+    var slides = Array.prototype.slice.call(document.querySelectorAll('.hero-slide'));
+    if (!slides.length) return;
+
+    var dotsWrap = document.querySelector('.hero-dots');
+    var cur = 0;
+    var timer = null;
+
+    slides.forEach(function (_, i) {
+        var d = document.createElement('button');
+        d.className = 'hero-dot' + (i === 0 ? ' active' : '');
+        d.type = 'button';
+        d.setAttribute('aria-label', 'Foto ' + (i + 1));
+        d.addEventListener('click', function () { go(i); restart(); });
+        if (dotsWrap) dotsWrap.appendChild(d);
+    });
+    var dots = Array.prototype.slice.call(document.querySelectorAll('.hero-dot'));
+
+    function go(n) {
+        slides[cur].classList.remove('active');
+        if (dots[cur]) dots[cur].classList.remove('active');
+        cur = (n + slides.length) % slides.length;
+        slides[cur].classList.add('active');
+        if (dots[cur]) dots[cur].classList.add('active');
+    }
+    function start() { timer = setInterval(function () { go(cur + 1); }, 3000); }
+    function stop() { if (timer) clearInterval(timer); }
+    function restart() { stop(); start(); }
+
+    var prev = document.querySelector('.hero-prev');
+    var next = document.querySelector('.hero-next');
+    if (prev) prev.addEventListener('click', function () { go(cur - 1); restart(); });
+    if (next) next.addEventListener('click', function () { go(cur + 1); restart(); });
+
+    var hero = document.querySelector('.hero-full');
+    if (hero) {
+        hero.addEventListener('mouseenter', stop);
+        hero.addEventListener('mouseleave', start);
+    }
+    start();
+})();
+
+(function () {
+    var els = Array.prototype.slice.call(document.querySelectorAll('.stat-number[data-count]'));
+    if (!els.length) return;
+
+    function fmt(n) { return Math.round(n).toLocaleString('id-ID'); }
+    function animate(el) {
+        var target = parseInt(el.getAttribute('data-count'), 10) || 0;
+        var dur = 1500;
+        var t0 = null;
+        function tick(t) {
+            if (!t0) t0 = t;
+            var p = Math.min((t - t0) / dur, 1);
+            el.textContent = fmt(target * (1 - Math.pow(1 - p, 3)));
+            if (p < 1) requestAnimationFrame(tick);
+        }
+        requestAnimationFrame(tick);
+    }
+
+    if ('IntersectionObserver' in window) {
+        var io = new IntersectionObserver(function (entries) {
+            entries.forEach(function (e) {
+                if (e.isIntersecting) { animate(e.target); io.unobserve(e.target); }
+            });
+        }, { threshold: 0.4 });
+        els.forEach(function (el) { io.observe(el); });
+    } else {
+        els.forEach(animate);
+    }
+})();

@@ -97,87 +97,68 @@
             HERO
     ============================ -->
 
-    <section class="hero" id="home" data-aos="fade-up">
+    <section class="hero hero-full" id="home">
 
-        <div class="container">
+        <div class="hero-slides" aria-hidden="true">
 
-            <div class="row align-items-center gy-5">
+            <div class="hero-slide active">
+                <img src="assets/images/desa.jpg" alt="Balai Desa Pagerkidul">
+                <span class="hero-slide-caption"><i class="bi bi-building"></i> Balai Desa Pagerkidul</span>
+            </div>
 
-                <div class="col-lg-6">
+            <div class="hero-slide">
+                <img src="assets/images/slide-pantai-1.jpg" alt="Pantai di Desa Pagerkidul" loading="lazy">
+                <span class="hero-slide-caption"><i class="bi bi-water"></i> Pantai Pagerkidul</span>
+            </div>
 
-                    <h1>
-                        Selamat Datang di
-                        <span>Desa Pagerkidul</span>
-                    </h1>
+            <div class="hero-slide">
+                <img src="assets/images/slide-pantai-2.jpg" alt="Keindahan pantai Desa Pagerkidul" loading="lazy">
+                <span class="hero-slide-caption"><i class="bi bi-sunrise"></i> Pesona Pantai Selatan</span>
+            </div>
 
-                    <p>
-                        Portal resmi Pemerintah Desa Pagerkidul sebagai pusat informasi,
-                        pelayanan publik, transparansi pemerintahan, serta promosi potensi
-                        desa kepada masyarakat.
-                    </p>
-
-                    <div class="row g-3 mt-4">
-
-                        <div class="col-6">
-                            <div class="hero-info-card">
-                                <i class="bi bi-geo-alt-fill"></i>
-                                <div>
-                                    <small>Luas Wilayah</small>
-                                    <h5>1.250 Ha</h5>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-6">
-                            <div class="hero-info-card">
-                                <i class="bi bi-people-fill"></i>
-                                <div>
-                                    <small>Jumlah Penduduk</small>
-                                    <h5>3.205 Jiwa</h5>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-6">
-                            <div class="hero-info-card">
-                                <i class="bi bi-building"></i>
-                                <div>
-                                    <small>Dusun</small>
-                                    <h5>5 Dusun</h5>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-6">
-                            <div class="hero-info-card">
-                                <i class="bi bi-tree-fill"></i>
-                                <div>
-                                    <small>Potensi</small>
-                                    <h5>Pertanian</h5>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-
-                    <div class="hero-button">
-                        <a href="#profil" class="btn btn-success">Jelajahi Desa</a>
-                        <a href="statistik.html" class="btn btn-outline-success">Dashboard</a>
-                    </div>
-
-                </div>
-
-                <div class="col-lg-6">
-
-                    <div class="hero-image-wrapper">
-                        <img src="assets/images/desa.jpg" class="hero-image" alt="Desa Pagerkidul">
-                    </div>
-
-                </div>
-
+            <div class="hero-slide">
+                <img src="assets/images/slide-musdes.jpg" alt="Kegiatan musyawarah desa bersama KKN-PPM UGM" loading="lazy">
+                <span class="hero-slide-caption"><i class="bi bi-people"></i> Musyawarah Desa &amp; KKN-PPM UGM</span>
             </div>
 
         </div>
+
+        <div class="hero-overlay"></div>
+
+        <div class="container hero-content">
+
+            <span class="hero-badge" data-aos="fade-down">
+                <i class="bi bi-geo-alt-fill"></i>
+                Kecamatan Sudimoro &middot; Kabupaten Pacitan
+            </span>
+
+            <h1 data-aos="fade-up">
+                Selamat Datang di
+                <span>Desa Pagerkidul</span>
+            </h1>
+
+            <p data-aos="fade-up" data-aos-delay="100">
+                Portal resmi Pemerintah Desa Pagerkidul sebagai pusat informasi,
+                pelayanan publik, transparansi pemerintahan, serta promosi potensi
+                desa kepada masyarakat.
+            </p>
+
+            <div class="hero-button" data-aos="fade-up" data-aos-delay="200">
+                <a href="#profil" class="btn btn-success">Jelajahi Desa</a>
+                <a href="statistik.html" class="btn btn-glass">Dashboard Statistik</a>
+            </div>
+
+        </div>
+
+        <button class="hero-nav hero-prev" type="button" aria-label="Foto sebelumnya">
+            <i class="bi bi-chevron-left"></i>
+        </button>
+
+        <button class="hero-nav hero-next" type="button" aria-label="Foto berikutnya">
+            <i class="bi bi-chevron-right"></i>
+        </button>
+
+        <div class="hero-dots" aria-label="Pilih foto"></div>
 
     </section>
 
@@ -272,6 +253,62 @@
                         <a href="#lokasi" class="btn btn-outline-success">Lokasi Desa</a>
                     </div>
 
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ===========================
+        STATISTIK SINGKAT (setelah Visi & Misi)
+    ============================ -->
+
+    <section class="stats-section" id="statistik-singkat">
+
+        <div class="container">
+
+            <div class="section-title" data-aos="fade-up">
+                <h2>Pagerkidul dalam Angka</h2>
+                <p>
+                    Sekilas data wilayah, kependudukan, dan potensi unggulan
+                    Desa Pagerkidul.
+                </p>
+            </div>
+
+            <div class="row g-4">
+
+                <div class="col-6 col-lg-3" data-aos="fade-up">
+                    <div class="stat-card">
+                        <div class="stat-icon"><i class="bi bi-geo-alt-fill"></i></div>
+                        <h3><span class="stat-number" data-count="1250">0</span> Ha</h3>
+                        <p>Luas Wilayah</p>
+                    </div>
+                </div>
+
+                <div class="col-6 col-lg-3" data-aos="fade-up" data-aos-delay="100">
+                    <div class="stat-card">
+                        <div class="stat-icon"><i class="bi bi-people-fill"></i></div>
+                        <h3><span class="stat-number" data-count="3205">0</span> Jiwa</h3>
+                        <p>Jumlah Penduduk</p>
+                    </div>
+                </div>
+
+                <div class="col-6 col-lg-3" data-aos="fade-up" data-aos-delay="200">
+                    <div class="stat-card">
+                        <div class="stat-icon"><i class="bi bi-building"></i></div>
+                        <h3><span class="stat-number" data-count="5">0</span> Dusun</h3>
+                        <p>Jumlah Dusun</p>
+                    </div>
+                </div>
+
+                <div class="col-6 col-lg-3" data-aos="fade-up" data-aos-delay="300">
+                    <div class="stat-card">
+                        <div class="stat-icon"><i class="bi bi-tree-fill"></i></div>
+                        <h3>Pertanian</h3>
+                        <p>Potensi Unggulan</p>
+                    </div>
                 </div>
 
             </div>
